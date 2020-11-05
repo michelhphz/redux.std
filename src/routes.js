@@ -9,7 +9,7 @@ function Routes()
     return(
         <Switch>
             <Route path='/' exact component={Home}/>
-            <Route path='/reservas' exact component={Reservas}/>
+            <Route path='/reservas' exact component={Reservas}/>            
         </Switch>
     )
 }

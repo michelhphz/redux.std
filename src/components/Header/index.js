@@ -1,6 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {FaPagelines} from 'react-icons/fa'
 
 import './styles.css'
 
@@ -11,12 +12,15 @@ function Header()
     return(
         <header className='container'>
             <Link to='/'>
-                <h1 className='logo'>logo</h1>
+                <div className='logo'>
+                    <FaPagelines/>
+                    <strong>FazenTech</strong>
+                </div>               
             </Link>
             <Link className='reserva' to='/reservas'>
                 <div>
-                    <strong>Minhas reservas</strong>
-                    <span>{reservaSize.length} reservas</span>
+                    <strong>Carrinho</strong>
+                    <span>{reservaSize.length} itens</span>
                 </div>
             </Link>
         </header>

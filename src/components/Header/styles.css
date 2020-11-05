@@ -5,12 +5,21 @@
     align-items: center;
     margin: 15px 0;
     padding: 10px 10px;
+    background-color: darkgreen;
+    max-width: 500px;
 }
 
-.logo
+.logo 
 {    
     color: #DDD;
     text-decoration: none;
+}
+
+.logo strong
+{    
+    color: #DDD;
+    text-decoration: none;
+    font-size: 25px;
 }
 
 .reserva

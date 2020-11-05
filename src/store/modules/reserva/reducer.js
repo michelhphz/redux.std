@@ -19,7 +19,7 @@ export default function reserva(state = [], action)
                 {
                     draft.splice(tripIndex, 1)
                 }
-            })
+            })	
         case 'UPDATE_RESERVA_SUCCES' :
             {   
                 return produce(state, draft =>
@@ -31,7 +31,7 @@ export default function reserva(state = [], action)
                         draft[tripIndex].amount = Number(action.amount)
                     }
                 })
-            }
+            }          
         default:
             return state
     }

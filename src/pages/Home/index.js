@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useDispatch} from 'react-redux'
 import {addReservaRequest} from '../../store/modules/reserva/actions'
-import {MdFlightTakeoff} from 'react-icons/md'
+import {MdShoppingCart} from 'react-icons/md'
 
 import api from '../../services/api'
 import './style.css'
@@ -28,7 +28,7 @@ function Home()
         dispatch(addReservaRequest(id))
     }
 
-    return(
+    return(		
         <div>
             <div className='box'>
                 {trips.map(trip => (
@@ -36,14 +36,15 @@ function Home()
                         <img src={trip.image} alt={trip.title}/>
                         <strong>{trip.title}</strong>
                         <span>Status: {trip.status ? 'Disponivel' : 'Indisponivel'}</span>
+                        <span>R$: {trip.price}</span>
                         <button
                             type='button'
                             onClick={()=> handleAdd(trip.id)}
                         >
                             <div>
-                                <MdFlightTakeoff/>
+                                <MdShoppingCart/>
                             </div>
-                            <span>SOLICITAR RESERVA</span>
+                            <span>COMPRAR</span>
                         </button>
                     </li>
                 ))}
